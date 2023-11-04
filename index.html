@@ -63,6 +63,53 @@
       .droplist li {
         border-top: 1px solid #292929;
       }
+      /* 移动端导航栏 */
+      @media (max-width: 767px) {
+        .nav {
+          height: 40px;
+          background: #9b9a9a;
+          box-shadow: 1px 2px 3px #5e5d5d;
+          
+        }
+
+        .btli {
+          float: left;
+          width: 100px;
+          line-height: 40px;
+          text-align: center;
+        
+        }
+        /* 超链接字的颜色 */
+        .navlist a {
+          color: #f1f1f1;
+          /* 让它以块模式来显示 */
+          display: block;
+        }
+        /* 鼠标悬停时背景颜色 */
+        .navlist a:hover {
+          background-color: #57be4e;
+        }
+        /* 下拉列表颜色 */
+        .droplist {
+          background-color: #9b9a9a;
+          box-shadow: 1px 2px 3px #5e5d5d;
+          /* 让它不显示 */
+          display: none;
+          overflow: hidden;
+        }
+        /* 鼠标悬停时显示 */
+        .btli:hover .droplist {
+          display: block;
+          position: relative;
+          z-index: 1;
+        }
+        /* 给每一个项加一条线隔开 */
+        .droplist li {
+          border-top: 1px solid #292929;
+        }
+        
+      }
+      
       .white {
         background-color: white;
       }
@@ -88,6 +135,10 @@
         text-align: center;
       }
     </style>
+   
+   
+    <!-- jQ库引用 -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   </head>
   <body class="flex mg8">
     <!-- 头像区 -->
@@ -101,25 +152,27 @@
     </div>
     <!-- 导航栏 -->
     <div class="nav">
-      <ul class="navlist">
-        <li class="btli"><a href="./index.html">HOME</a></li>
-        <li class="btli">
-          <a href="#">LOGIC</a>
-          <ul class="droplist">
-            <li><a href="./html/program.html">progrom</a></li>
-            <li><a href="#">biology</a></li>
-          </ul>
-        </li>
-        <li class="btli">
-          <a href="#">MOOD</a>
-          <ul class="droplist">
-            <li><a href="./html/moment.html">moment</a></li>
-            <li><a href="#">future</a></li>
-          </ul>
-        </li>
-        <li class="btli"><a href="#">POOL</a></li>
-        <li class="btli"><a href="#">ABOUT</a></li>
-      </ul>
+      <nav>
+        <ul class="navlist">
+          <li class="btli"><a href="./index.html">HOME</a></li>
+          <li class="btli">
+            <a href="#">LOGIC</a>
+            <ul class="droplist">
+              <li><a href="./html/program.html">progrom</a></li>
+              <li><a href="#">biology</a></li>
+            </ul>
+          </li>
+          <li class="btli">
+            <a href="#">MOOD</a>
+            <ul class="droplist">
+              <li><a href="./html/moment.html">moment</a></li>
+              <li><a href="#">future</a></li>
+            </ul>
+          </li>
+          <li class="btli"><a href="#">POOL</a></li>
+          <li class="btli"><a href="#">ABOUT</a></li>
+        </ul>
+      </nav>
     </div>
     <!-- 内容区 -->
     <div style="max-width: 700px; margin: 10px auto; padding: 20px">

@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>program</title>
+    <title>填充内容</title>
     <!-- icon -->
-    <link rel="icon" href="../picture/favicon/favicon.ico" />
+    <link rel="icon" href="#" />
 
     <style>
       body {
@@ -63,6 +63,7 @@
       .droplist li {
         border-top: 1px solid #292929;
       }
+      /* 其他 */
       .white {
         background-color: white;
       }
@@ -80,45 +81,21 @@
         box-shadow: rgb(0 0 0/ 20%) 2px 2px 2px -1px,
           rgb(0 0 0/ 14%) 2px 3px 3px 2px, rgb(0 0 0/ 12%) 2px 3px 4px 0px;
       }
-      p {
-        margin: 10px;
-        text-align: center;
-      }
-      /* 分页 */
-      ul.pagination {
-        display: inline-block;
-        padding: 10px;
-        margin: 10px;
-      }
 
-      ul.pagination li {
-        display: inline;
-      }
-
-      ul.pagination li a {
-        color: black;
-        float: left;
-        padding: 8px 16px;
-        text-decoration: none;
-        border-radius: 5px;
-      }
-
-      ul.pagination li a.active {
-        background-color: #4caf50;
-        color: white;
-        border-radius: 5px;
-      }
-
-      ul.pagination li a:hover:not(.active) {
-        background-color: #ddd;
-      }
       /* 文字居中 */
       .center {
-        align-items: center;
         display: flex;
         justify-content: center;
-        line-height: 3px;
-        height: 160px;
+        line-height: 30px;
+        padding: 20px;
+      }
+      /* h3行距 */
+      .h3 {
+        line-height: 40px;
+      }
+      /* 小字体 */
+      .small {
+        font-size: 15px;
       }
     </style>
   </head>
@@ -135,18 +112,20 @@
     <!-- 导航栏 -->
     <div class="nav">
       <ul class="navlist">
-        <li class="btli"><a href="../index.html">HOME</a></li>
+        <li class="btli">
+          <a href="https://cohen-cell.github.io/home/index.html">HOME</a>
+        </li>
         <li class="btli">
           <a href="#">LOGIC</a>
           <ul class="droplist">
-            <li><a href="./program.html">progrom</a></li>
+            <li><a href="../program.html">progrom</a></li>
             <li><a href="#">biology</a></li>
           </ul>
         </li>
         <li class="btli">
           <a href="#">MOOD</a>
           <ul class="droplist">
-            <li><a href="#">moment</a></li>
+            <li><a href="../moment.html">moment</a></li>
             <li><a href="#">future</a></li>
           </ul>
         </li>
@@ -155,34 +134,44 @@
       </ul>
     </div>
     <!-- 内容区 -->
-    <div style="max-width: 700px; margin: 10px auto; padding: 20px">
-      <!-- 列表项 -->
-      <div style="width: 700px">
-        <div class="mgt8 white shadow center">
-          <p>哎~</p>
-        </div>
-      <div style="width: 700px">
-        <div class="mgt8 white shadow center">
-          <p>终于解决一部分上传的版本问题了，哎呀我真是天才！(●´З｀●)</p>
-        </div>
-        <div class="mgt8 white shadow center">
-          <p>继program板块开放后，moment也诞生啦！</p>
+    <div style="margin: 10px auto; padding: 20px">
+      <div style="width: 900px">
+        <div class="flex mgt8 white shadow center">
+          <article>
+            <!-- 标题 -->
+            <h1 style="line-height: 80px">2. blog搭建-填充内容</h1>
+            <p style="margin-bottom: 8px; color: #4ba843">
+              <i>友情提示：此文章为本网站搭建的缩影，不一定是正确方式</i>
+            </p>
+
+            <p>
+              在用html和css布局后，网站初步具备一个可观的模型，但没有内容，也不可以点击。
+            </p>
+            <p>
+              <strong>如何把内容填充到这些空盒子的背后？</strong>
+            </p>
+            <p>（QAQ这里困扰了我好久！）</p>
+            <p><strong>复制+超链接</strong></p>
+            <p>
+              （1）将首页的html复制多个，这样就有了一致的模板，再进行改动，变成不同的样式。
+            </p>
+            <p>（2）布置盒子，上超链接。</p>
+            （超链接真是一个伟大的发明！）
+            <p>
+              （3）通过超链接跳转到一个新的html文件，在这里可以写字，然后就可以生成一篇文章啦。
+            </p>
+
+            <p>困惑的原因：</p>
+            <p>（1）认为建blog只用一个网页</p>
+            <p>（2）不知道如何引入没有生成网址的html</p>
+            <p>（3）不知道上线网站后如何处理版本更新问题</p>
+            <p>（4）想太多！</p>
+            <p>我预设会遇到的困难：————————————————————————————</p>
+            <p>实际上：——————————</p>
+            <p>（大家还是要多动手，勇敢验证自己的想法QWQ）</p>
+          </article>
         </div>
       </div>
-    </div>
-    <!-- 分页 -->
-    <div style="display: flex; justify-content: center">
-      <ul class="pagination">
-        <li><a href="#">«</a></li>
-        <li><a href="#">1</a></li>
-        <li><a class="active" href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">6</a></li>
-        <li><a href="#">7</a></li>
-        <li><a href="#">»</a></li>
-      </ul>
     </div>
 
     <!-- 版权 -->

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>program</title>
+    <!-- icon -->
+    <link rel="icon" href="../picture/favicon/favicon.ico" />
+
+    <style>
+      body {
+        margin: 0;
+        height: 97vh;
+        background-color: #f1f1f1;
+      }
+      .flex {
+        display: flex;
+        flex-direction: column;
+      }
+      /* 导航栏 */
+      .nav {
+        height: 40px;
+        background: #9b9a9a;
+        box-shadow: 1px 2px 3px #5e5d5d;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+      }
+      .btli {
+        float: left;
+        width: 150px;
+        line-height: 40px;
+        text-align: center;
+      }
+      /* 超链接字的颜色 */
+      .navlist a {
+        color: #f1f1f1;
+        /* 让它以块模式来显示 */
+        display: block;
+      }
+      /* 鼠标悬停时背景颜色 */
+      .navlist a:hover {
+        background-color: #57be4e;
+      }
+      /* 下拉列表颜色 */
+      .droplist {
+        background-color: #9b9a9a;
+        box-shadow: 1px 2px 3px #5e5d5d;
+        /* 让它不显示 */
+        display: none;
+        overflow: hidden;
+      }
+      /* 鼠标悬停时显示 */
+      .btli:hover .droplist {
+        display: block;
+      }
+      /* 给每一个项加一条线隔开 */
+      .droplist li {
+        border-top: 1px solid #292929;
+      }
+      .white {
+        background-color: white;
+      }
+      .black {
+        background-color: #868585;
+      }
+
+      .mg8 {
+        margin: 8px;
+      }
+      .mgt8 {
+        margin-top: 40px;
+      }
+      .shadow {
+        box-shadow: rgb(0 0 0/ 20%) 2px 2px 2px -1px,
+          rgb(0 0 0/ 14%) 2px 3px 3px 2px, rgb(0 0 0/ 12%) 2px 3px 4px 0px;
+      }
+      p {
+        margin: 10px;
+        text-align: center;
+      }
+      /* 分页 */
+      ul.pagination {
+        display: inline-block;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      ul.pagination li {
+        display: inline;
+      }
+
+      ul.pagination li a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      ul.pagination li a.active {
+        background-color: #4caf50;
+        color: white;
+        border-radius: 5px;
+      }
+
+      ul.pagination li a:hover:not(.active) {
+        background-color: #ddd;
+      }
+      /* 文字居中 */
+      .center {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        line-height: 3px;
+        height: 160px;
+      }
+    </style>
+  </head>
+  <body class="flex mg8">
+    <!-- 头像区 -->
+    <div style="text-align: center; padding: 30px">
+      <img
+        src="https://z1.ax1x.com/2023/10/29/pimppZD.png"
+        alt="snow cell"
+        width="90px"
+        height="90px"
+      />
+    </div>
+    <!-- 导航栏 -->
+    <div class="nav">
+      <ul class="navlist">
+        <li class="btli"><a href="../index.html">HOME</a></li>
+        <li class="btli">
+          <a href="#">LOGIC</a>
+          <ul class="droplist">
+            <li><a href="./program.html">progrom</a></li>
+            <li><a href="#">biology</a></li>
+          </ul>
+        </li>
+        <li class="btli">
+          <a href="#">MOOD</a>
+          <ul class="droplist">
+            <li><a href="#">moment</a></li>
+            <li><a href="#">future</a></li>
+          </ul>
+        </li>
+        <li class="btli"><a href="#">POOL</a></li>
+        <li class="btli"><a href="#">ABOUT</a></li>
+      </ul>
+    </div>
+    <!-- 内容区 -->
+    <div style="max-width: 700px; margin: 10px auto; padding: 20px">
+      <!-- 列表项 -->
+      <div style="width: 700px">
+        <div class="mgt8 white shadow center">
+          <p>继program板块开放后，moment也诞生啦！</p>
+          <p>yeah</p>
+        </div>
+      </div>
+    </div>
+    <!-- 分页 -->
+    <div style="display: flex; justify-content: center">
+      <ul class="pagination">
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a class="active" href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
+    </div>
+
+    <!-- 版权 -->
+    <div
+      style="
+        background-color: #0a0a0ac7;
+        text-align: center;
+        padding: 30px;
+        font-size: 12px;
+        color: aliceblue;
+      "
+    >
+      <p>Copyright: ©2023皑皑</p>
+      <p></p>
+    </div>
+  </body>
+</html>

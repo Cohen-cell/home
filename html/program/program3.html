@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>学习编程记录</title>
+    <title>使用VScode上传项目到github</title>
     <!-- icon -->
     <link rel="icon" href="https://s1.wzznft.com/i/2023/11/05/j2keai.ico" />
 
@@ -112,7 +112,9 @@
     <!-- 导航栏 -->
     <div class="nav">
       <ul class="navlist">
-        <li class="btli"><a href="https://cohen-cell.github.io/home/index.html">HOME</a></li>
+        <li class="btli">
+          <a href="https://cohen-cell.github.io/home/index.html">HOME</a>
+        </li>
         <li class="btli">
           <a href="#">LOGIC</a>
           <ul class="droplist">
@@ -135,50 +137,66 @@
     <div style="margin: 10px auto; padding: 20px">
       <div style="width: 900px">
         <div class="flex mgt8 white shadow center">
-          <article style="margin-left: 10px;">
+          <article style="margin-left: 10px">
             <!-- 标题 -->
-            <h1 style="line-height: 80px">1. 学习编程记录</h1>
-            <h3>基础理论</h3>
-            <p style="margin-top: 10px">编程=编写程序</p>
-            <p>程序=数据+函数</p>
-            <p>浏览器（函数）调用&nbsphtlm（参数）输出&nbsp网页画面</p>
-            <h3 class="h3">html基本框架</h3>
-            <p>!DOCTYPE&nbsphtml</p>
-            <p>html</p>
-            <p>&nbsphead /head</p>
-            <p>&nbspbody /body</p>
-            <p>/html</p>
-            <h3 class="h3">常用标签</h3>
-            <p>盒子：div /div</p>
-            <p class="small"><i>万能的盒子！得盒子者得天下！</i></p>
-            <p>段落：p /p：</p>
-            <p class="small"><i>很常用，比如我现在就在用</i></p>
-            <p>图像：img src="URL" alt="text"</p>
-            <p>链接：a href="URL" text /a</p>
-            <h3 class="h3">CSS（Cascading Style Sheets）</h3>
-            <p>3种修饰方法：</p>
-            <p><strong>（1）外部样式表</strong></p>
-            <p><i>相当于把内部样式表独立出来</i></p>
-            <p>创建一个.css文件，在头部用link引入</p>
-            <p>link rel="stylesheet" type="text/css" href="mystyle.css"</p>
-            <p><strong>（2）内部样式表</strong></p>
-            <p>在头部用style定义样式</p>
-            <p>style</p>
-            <p>&nbsphr{color:#}</p>
-            <p>&nbspp{margin-left:20px}</p>
-            <p>/style</p>
-            <p>①改变全部相同标签样式</p>
-            <p>p{margin-left:20px}</p>
-            <p>②#名字{margin-left:20px;}</p>
-            <p>p id="名字"&nbsptext/p</p>
-            <p>③class选择器</p>
-            <p>多个标签的class可以相同</p>
-            <p>.名字{margin-left:20px;}</p>
-            <p>给标签加class属性</p>
-            <p>div class="名字" text</p>
-            <p><strong>（3）内联样式</strong></p>
-            <p>直接在标签内部使用style</p>
-            <p>div style="color:#;margin-left:20px"</p>
+            <h1 style="line-height: 80px">
+              3. blog搭建-使用VScode上传项目到github
+            </h1>
+            <h3>具体操作请看</h3>
+            <p style="margin-top: 10px">
+              https://blog.csdn.net/m0_51185558/article/details/126181439
+            </p>
+            <p>
+              软件下载可以看<a
+                href="https://www.bilibili.com/video/BV1k34y1Y7xk/?spm_id_from=333.788&vd_source=5084ec0c5712d65f0c37d5eb7c5b8248"
+                >康老师</a
+              >的
+            </p>
+            <p>康老师网站里有快速下载包</p>
+            <h3 class="h3">出错解决环节</h3>
+            <p>
+              在跟着CSDN教程做到在vscode终端输入ssh -T git@github.com时<br />出现ssh:
+              connect to host github.com port 22: Connection refused
+            </p>
+            <p>原因是从22端口访问git.hub被拒绝</p>
+            <p>解决方法：从443端口访问</p>
+            <p>使用此方法前建议先输入ssh -T -p 443 git@ssh.github.com测试</p>
+            <p>如果输出结果不再提示connection refused再进行以下操作</p>
+            <p>C:\Users\pc\.ssh</p>
+            <p>打开ssh文件夹，复制id_rsa.pub文件，更名为congig</p>
+            <p>用记事本打开config，Alt+A删除全部内容，将以下内容替换进去</p>
+            <p>
+              Host github.com<br />
+              &nbspHostname ssh.github.com<br />
+              &nbspPort 443
+            </p>
+            <p>
+              <img src="./picture-p/p3-2.png" alt="示例" />
+            </p>
+            <p>
+              修改完后再次输入ssh -T git@github.com<br />显示<br />
+              Hi xxxxx! You've successfully authenticated, but GitHub does not
+              provide shell access.<br />
+              则代表成功
+            </p>
+            <p>此时可继续跟着CSDN教程操作</p>
+            <h3 class="h3">提示</h3>
+            <p>在上传项目到github之前请先检查自己项目文件夹设置的合理度</p>
+            <p>一定要把主页命名为index.html然后放在根目录</p>
+            <p>放在其他目录是无法生成网页链接的</p>
+            <p>
+              <img src="./picture-p/p3-1.png" alt="示例" width="800px" />
+            </p>
+            <p>
+              如果放错了，不熟悉git的小伙伴也请不要在github上直接进行修改<br />
+              可以先在本地改完之后再同步到github
+            </p>
+            <p>
+              直接在github仓库上修改，下次再同步时候会出现一个关于“合并”的错误
+            </p>
+            <p>
+              以上操作全部完成后，以后每次在本地对网站进行修改，都可以通过VScode同步到github，很方便！
+            </p>
           </article>
         </div>
       </div>

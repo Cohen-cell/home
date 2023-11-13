@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="皑皑" />
-    <meta name="description" content="It is an island of snow cell." />
-    <title>皑皑</title>
+    <title>program</title>
     <!-- icon -->
     <link rel="icon" href="https://s1.wzznft.com/i/2023/11/05/j2keai.ico" />
 
@@ -65,57 +63,11 @@
       .droplist li {
         border-top: 1px solid #292929;
       }
-      /* 移动端导航栏 */
-      @media (max-width: 767px) {
-        .nav {
-          height: 40px;
-          background: #9b9a9a;
-          box-shadow: 1px 2px 3px #5e5d5d;
-        }
-        .btli {
-          float: left;
-          width: 70px;
-          line-height: 40px;
-          text-align: center;
-        }
-        /* 超链接字的颜色 */
-        .navlist a {
-          color: #f1f1f1;
-          /* 让它以块模式来显示 */
-          display: block;
-        }
-        /* 鼠标悬停时背景颜色 */
-        .navlist a:hover {
-          background-color: #57be4e;
-        }
-        /* 下拉列表颜色 */
-        .droplist {
-          background-color: #9b9a9a;
-          box-shadow: 1px 2px 3px #5e5d5d;
-          /* 让它不显示 */
-          display: none;
-          overflow: hidden;
-        }
-        /* 鼠标悬停时显示 */
-        .btli:hover .droplist {
-          display: block;
-          position: relative;
-          z-index: 1;
-        }
-        /* 给每一个项加一条线隔开 */
-        .droplist li {
-          border-top: 1px solid #292929;
-        }
-      }
-
       .white {
         background-color: white;
       }
       .black {
         background-color: #868585;
-      }
-      .flex1 {
-        flex: 1;
       }
 
       .mg8 {
@@ -132,11 +84,41 @@
         margin: 10px;
         text-align: center;
       }
+      /* 分页 */
+      ul.pagination {
+        display: inline-block;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      ul.pagination li {
+        display: inline;
+      }
+
+      ul.pagination li a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      ul.pagination li a.active {
+        background-color: #4caf50;
+        color: white;
+        border-radius: 5px;
+      }
+
+      ul.pagination li a:hover:not(.active) {
+        background-color: #ddd;
+      }
+      /* 文字居中 */
       .center {
-        height: 160px;
         align-items: center;
         display: flex;
         justify-content: center;
+        line-height: 3px;
+        height: 160px;
       }
     </style>
   </head>
@@ -152,43 +134,52 @@
     </div>
     <!-- 导航栏 -->
     <div class="nav">
-      <nav>
-        <ul class="navlist">
-          <li class="btli"><a href="./index.html">HOME</a></li>
-          <li class="btli">
-            <a href="#">LOGIC</a>
-            <ul class="droplist">
-              <li><a href="./html/program.html">progrom</a></li>
-              <li><a href="#">biology</a></li>
-            </ul>
-          </li>
-          <li class="btli">
-            <a href="#">MOOD</a>
-            <ul class="droplist">
-              <li><a href="./html/moment.html">moment</a></li>
-              <li><a href="./html/future.html">future</a></li>
-            </ul>
-          </li>
-          <li class="btli"><a href="#">POOL</a></li>
-          <li class="btli"><a href="#">ABOUT</a></li>
-        </ul>
-      </nav>
+      <ul class="navlist">
+        <li class="btli"><a href="../index.html">HOME</a></li>
+        <li class="btli">
+          <a href="#">LOGIC</a>
+          <ul class="droplist">
+            <li><a href="./program.html">progrom</a></li>
+            <li><a href="#">biology</a></li>
+          </ul>
+        </li>
+        <li class="btli">
+          <a href="#">MOOD</a>
+          <ul class="droplist">
+            <li><a href="#">moment</a></li>
+            <li><a href="#">future</a></li>
+          </ul>
+        </li>
+        <li class="btli"><a href="#">POOL</a></li>
+        <li class="btli"><a href="#">ABOUT</a></li>
+      </ul>
     </div>
     <!-- 内容区 -->
     <div style="max-width: 700px; margin: 10px auto; padding: 20px">
       <!-- 列表项 -->
-      <div style="height: 500px; width: 700px">
-        <div class="mgt8 white shadow center">
-          <p style="line-height: 30px">
-            此网站技术上最近不会有大的迭代更新<br />可以不看
-          </p>
-        </div>
-        <div class="mgt8 white shadow center">
-          <p style="line-height: 30px">
-            Do you wanna build a snowman?<br />No, you want a snow cell~
-          </p>
+      <div style="width: 700px">
+        <div style="width: 700px">
+          <a href="./future/future1.html">
+            <div class="mgt8 white shadow center">
+              <p>1. 另一种可能</p>
+            </div>
+          </a>
         </div>
       </div>
+    </div>
+    <!-- 分页 -->
+    <div style="display: flex; justify-content: center">
+      <ul class="pagination">
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a class="active" href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
     </div>
 
     <!-- 版权 -->
